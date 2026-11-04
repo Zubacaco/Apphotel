@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Apphotel.SobrePage"
+             Title="Sobre"
+             BackgroundColor="#F4F7FB">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25"
+                             Spacing="22">
+
+            <Label Text="APPHOTEL"
+                   FontSize="34"
+                   FontAttributes="Bold"
+                   TextColor="#164E82"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Conforto e praticidade em cada reserva."
+                   FontSize="16"
+                   TextColor="#666666"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"/>
+
+            <Border BackgroundColor="White"
+                    Stroke="#D5DFEA"
+                    StrokeShape="RoundRectangle 15"
+                    Padding="25">
+
+                <VerticalStackLayout Spacing="18">
+
+                    <Label Text="Sobre nós"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           TextColor="#164E82"/>
+
+                    <Label Text="O Apphotel é uma plataforma de simulação de reservas de hospedagem, desenvolvida para oferecer uma experiência simples, rápida e organizada na escolha de acomodações."
+                           FontSize="16"
+                           LineBreakMode="WordWrap"/>
+
+                    <Label Text="Nossa proposta"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#164E82"/>
+
+                    <Label Text="Facilitar a escolha de quartos, a definição do período de hospedagem e a consulta dos valores de forma clara e intuitiva."
+                           FontSize="16"
+                           LineBreakMode="WordWrap"/>
+
+                    <BoxView HeightRequest="1"
+                             Color="#D5DFEA"/>
+
+                    <Label Text="Informações do aplicativo"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#164E82"/>
+
+                    <Label Text="Versão: 1.0"
+                           FontSize="15"/>
+
+                    <Label Text="Desenvolvedor: Matheus Ribeiro Kassahara"
+                           FontSize="15"/>
+
+                    <Label Text="Ano: 2026"
+                           FontSize="15"/>
+
+                    <Label Text="Tecnologia: .NET MAUI"
+                           FontSize="15"/>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Button Text="VOLTAR"
+                    BackgroundColor="#164E82"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Clicked="Voltar_Clicked"/>
+
+            <Label Text="© 2026 Apphotel"
+                   FontSize="12"
+                   TextColor="#777777"
+                   HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

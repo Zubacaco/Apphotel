@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Apphotel.MainPage"
+             Title="Apphotel"
+             BackgroundColor="#F4F7FB">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="18">
+
+            <Label Text="APPHOTEL"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   TextColor="#164E82"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Sua hospedagem começa aqui!"
+                   FontSize="17"
+                   HorizontalOptions="Center"
+                   TextColor="#555555"/>
+
+            <Border BackgroundColor="White"
+                    Stroke="#D5DFEA"
+                    StrokeShape="RoundRectangle 15"
+                    Padding="20">
+
+                <VerticalStackLayout Spacing="14">
+
+                    <Label Text="Faça sua reserva"
+                           FontSize="23"
+                           FontAttributes="Bold"
+                           TextColor="#164E82"/>
+
+                    <Label Text="Nome do hóspede"/>
+                    <Entry x:Name="NomeEntry"
+                           Placeholder="Digite seu nome"/>
+
+                    <Label Text="Tipo de quarto"/>
+                    <Picker x:Name="QuartoPicker"
+                            Title="Escolha um quarto">
+                        <Picker.Items>
+                            <x:String>Simples - R$ 150</x:String>
+                            <x:String>Duplo - R$ 250</x:String>
+                            <x:String>Luxo - R$ 400</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="Quantidade de hóspedes"/>
+                    <HorizontalStackLayout Spacing="15">
+                        <Stepper x:Name="HospedesStepper"
+                                 Minimum="1"
+                                 Maximum="6"
+                                 Increment="1"
+                                 Value="1"
+                                 ValueChanged="HospedesStepper_ValueChanged"/>
+                        <Label x:Name="HospedesLabel"
+                               Text="1 hóspede"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <Label Text="Data de entrada"/>
+                    <DatePicker x:Name="EntradaPicker"
+                                Format="dd/MM/yyyy"/>
+
+                    <Label Text="Data de saída"/>
+                    <DatePicker x:Name="SaidaPicker"
+                                Format="dd/MM/yyyy"/>
+
+                    <Button Text="CONFIRMAR RESERVA"
+                            BackgroundColor="#164E82"
+                            TextColor="White"
+                            Clicked="Reservar_Clicked"/>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Button Text="SOBRE O APLICATIVO"
+                    BackgroundColor="#DCE8F4"
+                    TextColor="#164E82"
+                    Clicked="Sobre_Clicked"/>
+
+            <Label Text="Apphotel • 2026"
+                   HorizontalOptions="Center"
+                   TextColor="#777777"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
