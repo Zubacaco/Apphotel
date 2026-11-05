@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Apphotel.HospedagemContratada"
+             Title="Resumo da Hospedagem"
+             BackgroundColor="#F3F5F9">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="20">
+
+            <Border BackgroundColor="#142D4E"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 20"
+                    Padding="25">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label Text="RESUMO DA RESERVA"
+                           FontSize="25"
+                           FontAttributes="Bold"
+                           TextColor="#F2C572"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Label Text="Confira os dados da sua hospedagem"
+                           FontSize="14"
+                           TextColor="White"
+                           HorizontalTextAlignment="Center"/>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Border BackgroundColor="White"
+                    Stroke="#DCE3ED"
+                    StrokeShape="RoundRectangle 18"
+                    Padding="22">
+
+                <VerticalStackLayout Spacing="15">
+
+                    <Label x:Name="SuiteLabel"
+                           FontSize="25"
+                           FontAttributes="Bold"
+                           TextColor="#142D4E"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Label Text="Hóspede responsável"
+                           FontAttributes="Bold"
+                           TextColor="#142D4E"/>
+
+                    <Label x:Name="NomeLabel"
+                           FontSize="17"
+                           TextColor="#333333"/>
+
+                    <Label Text="Quantidade de hóspedes"
+                           FontAttributes="Bold"
+                           TextColor="#142D4E"/>
+
+                    <Grid ColumnDefinitions="*,*"
+                          ColumnSpacing="10">
+
+                        <VerticalStackLayout Grid.Column="0">
+
+                            <Label Text="Adultos"
+                                   TextColor="#667085"/>
+
+                            <Label x:Name="AdultosLabel"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   TextColor="#142D4E"/>
+
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Grid.Column="1">
+
+                            <Label Text="Crianças"
+                                   TextColor="#667085"/>
+
+                            <Label x:Name="CriancasLabel"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   TextColor="#142D4E"/>
+
+                        </VerticalStackLayout>
+                    </Grid>
+
+                    <BoxView HeightRequest="1"
+                             Color="#DCE3ED"/>
+
+                    <Label Text="Período da hospedagem"
+                           FontAttributes="Bold"
+                           TextColor="#142D4E"/>
+
+                    <Label x:Name="EntradaLabel"
+                           TextColor="#333333"/>
+
+                    <Label x:Name="SaidaLabel"
+                           TextColor="#333333"/>
+
+                    <Label x:Name="DiariasLabel"
+                           TextColor="#333333"/>
+
+                    <BoxView HeightRequest="1"
+                             Color="#DCE3ED"/>
+
+                    <Label Text="VALOR TOTAL"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                           TextColor="#667085"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Label x:Name="TotalLabel"
+                           FontSize="32"
+                           FontAttributes="Bold"
+                           TextColor="#142D4E"
+                           HorizontalTextAlignment="Center"/>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Button Text="VOLTAR"
+                    BackgroundColor="#142D4E"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="12"
+                    HeightRequest="55"
+                    Clicked="Voltar_Clicked"/>
+
+            <Label Text="Apphotel | 2026"
+                   HorizontalOptions="Center"
+                   FontSize="12"
+                   TextColor="#777777"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
